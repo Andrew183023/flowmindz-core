@@ -1,34 +1,36 @@
 # FlowMindz Modular Core 🚀🧠
 
-Este repositório contém o núcleo modular da plataforma **FlowMindz**, com os seguintes módulos ativados:
+Este repositório contém o núcleo modular da plataforma **FlowMindz**, com integração total entre:
 
-- ✅ FlowOps (Inteligência Fiscal e Tributária)
-- ✅ FlowGov (Radar Nacional de Licitações Públicas)
-- ✅ Painel Vite com conexão à FlowMind
+- ✅ **FlowOps**: Inteligência Fiscal e Tributária com IA (GPT-4)
+- ✅ **FlowGov**: Radar Nacional de Licitações Públicas
+- ✅ **Painel Vite**: Conectado ao backend com IA e PostgreSQL
+
+---
+
+## ⚙️ Requisitos
+
+- Python 3.11+
+- PostgreSQL ativo e configurado
+- Chave da API OpenAI (GPT-4)
+- Variáveis de ambiente `.env`
+
+---
 
 ## 🚀 Como rodar localmente
 
 ```bash
-git clone https://github.com/Andrew183023/flowmindz-modular-core.git
-cd flowmindz-modular-core
+git clone https://github.com/Andrew183023/flowmindz-modular-core-final-v2.git
+cd flowmindz-modular-core-final-v2
+
 python -m venv venv
-source venv/bin/activate  # ou .\venv\Scripts\activate no Windows
+# Ative o ambiente:
+# Linux/Mac
+source venv/bin/activate
+# Windows
+.\venv\Scripts\activate
+
 pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
 
-## 🧠 Deploy com Docker
-
-```bash
-docker build -t flowmindz-core .
-docker run -d -p 8000:8000 flowmindz-core
-```
-
-## 🌐 Deploy na Railway
-
-Configure variáveis `.env` com sua URL de banco e chaves de API.
-
----
-
-**Criado por:** Andrew Michael de Oliveira  
-**Projeto:** Flow Core Group 🌎
+# Execute o backend
+uvicorn main:app --reload
